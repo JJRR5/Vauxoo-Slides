@@ -4,3 +4,4 @@
 .flake8
 .pylintrc
 .pylintrc-optional
+.eslintrc.json

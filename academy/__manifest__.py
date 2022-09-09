@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': "academy",
 
@@ -10,7 +9,7 @@
         Long description of module's purpose
     """,
 
-    'author': "My Company",
+    'author': "Vauxoo",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -20,13 +19,18 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': [
+        'website',
+    ],
 
     # always loaded
     'data': [
-        'views/templates.xml'
+        'security/ir.model.access.csv',
+        'views/templates.xml',
+        'views/academy_teachers_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
+        'demo/demo.xml',
     ],
 }

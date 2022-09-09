@@ -1,12 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <template id="index">
-        <title>Academy</title>
-        <t t-foreach="teachers" t-as="teacher">
-            <p><t t-esc="teacher"/></p>
+        <t t-call="website.layout">
+            <title>Academy</title>
+            <div class="oe_structure">
+                <t t-foreach="teachers" t-as="teacher">
+                    <p>
+                        <a t-attf-href="/academy/render_teacher/{{ slug(teacher) }}">
+                            <t t-esc="teacher.name"/>
+                        </a>
+                    </p>
+                </t>
+            </div>
         </t>
-        <t t-if="1 == 1">
-            <p>1 is equal to 1</p>
+    </template>
+    <template id="biography">
+        <t t-call="website.layout">
+        <title>Academy</title>
+        <div class="oe_structure"/>
+            <div class="oe_structure">
+                <div class="container">
+                    <h3 t-field="person.name"/>
+                    <p>Last modified: <i t-field="person.write_date" t-options="{'widget': 'relative'}"/></p>
+                    <div t-field="person.biography"/>
+                </div>
+            </div>
         </t>
     </template>
 </odoo>
