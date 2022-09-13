@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="padilla" model="academy.teacher">
+        <field name="name">Diana Padilla</field>
+    </record>
+    <record id="rodriguez" model="academy.teacher">
+        <field name="name">Pepe Rodriguez</field>
+    </record>
+    <record id="comunica" model="academy.teacher">
+        <field name="name">Luisito Comunica</field>
+    </record>
+</odoo>
