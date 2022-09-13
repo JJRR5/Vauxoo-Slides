@@ -27,4 +27,9 @@
             </div>
         </t>
     </template>
+    <template id="products_item" inherit_id="website_sale.products_item">
+        <xpath expr="//form/div[2]" position="after">
+            <p t-esc="product.id" class="text-center"></p>
+        </xpath>
+    </template>
 </odoo>
