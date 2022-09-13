@@ -20,7 +20,7 @@
 
     # any module necessary for this one to work correctly
     'depends': [
-        'website',
+        'website_sale',
     ],
 
     # always loaded
