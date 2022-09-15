@@ -29,9 +29,9 @@ class Academy(http.Controller):
 
     @http.route('/academy/<int:id>', auth='public', website=True)
     def int_teacher(self, id):
-        """Creates a h1 tag with a given id 
+        """Creates a h1 tag with a given id
 
-        :param id: the id number 
+        :param id: the id number
         :type id: int
         :return: the id and it's type
         :rtype: str
@@ -49,11 +49,12 @@ class Academy(http.Controller):
         """
         return http.request.render('academy.biography', {'person': teacher})
 
+
 class WebsiteSaleInherit(WebsiteSale):
 
     @http.route()
     def shop(self, page=0, category=None, search='', ppg=False, **post):
         res = super().shop(page=page, category=category, search=search, ppg=ppg, **post)
         res.qcontext['search'] = 'ipad'
-        res.qcontext['categories'] = res.qcontext['categories'].sorted(key= lambda product: product.name)
+        res.qcontext['categories'] = res.qcontext['categories'].sorted(key=lambda product: product.name)
         return res

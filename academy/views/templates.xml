@@ -30,7 +30,7 @@
     </template>
 
     <template id="products_item" inherit_id="website_sale.products_item">
-        <xpath expr="//form/div[2]" position="after">
+        <xpath expr="//form/div" position="after">
             <p t-esc="product.id" class="text-center"></p>
         </xpath>
     </template>
