@@ -28,7 +28,7 @@
         'security/ir.model.access.csv',
         'views/assets.xml',
         'views/templates.xml',
-        # 'views/academy_teachers_views.xml',
+        'views/academy_teachers_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

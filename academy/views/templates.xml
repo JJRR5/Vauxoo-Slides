@@ -5,12 +5,14 @@
             <title>Academy</title>
             <div class="oe_structure">
                 <t t-foreach="teachers" t-as="teacher">
-                    <p>
-                        <a t-attf-href="/academy/render_teacher/{{ slug(teacher) }}">
+                    <p class="rpc-container" t-att-data-teacher-id="teacher.id">
+                        <a class="rpc-container" t-attf-href="#">
                             <t t-esc="teacher.name"/>
                         </a>
                     </p>
                 </t>
+                <div class="biography">
+                </div>
             </div>
         </t>
     </template>
