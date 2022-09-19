@@ -12,4 +12,3 @@ class TestUiTeachers(odoo.tests.HttpCase):
             'odoo.__DEBUG__.services["web_tour.tour"].tours.tour_show_biographies.ready',
             loding='admin'
         )
-        

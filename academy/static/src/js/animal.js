@@ -1,9 +1,9 @@
 odoo.define('academy.animal', function (require){
     'use strict';
 
-    var classTest = require('web.Class');
+    var WebClass = require('web.Class');
 
-    var Animal = classTest.extend({
+    var Animal = WebClass.extend({
         init: function (){
             this.x = 0
             this.hunger = 0;

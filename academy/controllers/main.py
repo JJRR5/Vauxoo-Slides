@@ -56,7 +56,8 @@ class Academy(http.Controller):
             [('id','=',args.get('teacher_id', False))],
             fields=['biography']
         )
-        return teacher
+        response = {'error': 'No teachers found'}
+        return teacher if teacher else response
 
 
 class WebsiteSaleInherit(WebsiteSale):
@@ -64,6 +65,5 @@ class WebsiteSaleInherit(WebsiteSale):
     @http.route()
     def shop(self, page=0, category=None, search='', ppg=False, **post):
         res = super().shop(page=page, category=category, search=search, ppg=ppg, **post)
-        res.qcontext['search'] = 'ipad'
         res.qcontext['categories'] = res.qcontext['categories'].sorted(key=lambda product: product.name)
         return res

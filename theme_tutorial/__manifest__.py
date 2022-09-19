@@ -1,12 +1,9 @@
 {
     'name': "theme_tutorial",
 
-    'summary': """
-        a theme tutorial app""",
+    'summary': "A theme tutorial app",
 
-    'description': """
-        A theme tutorial app
-    """,
+    'description': "A theme tutorial app",
 
     'author': "Vauxoo",
     'website': "http://www.yourcompany.com",

@@ -6,6 +6,10 @@ odoo.define('academy.demo_rpc', function(require){
     RPC = require('web.rpc');
     require('web.dom_ready');
 
+    if(!$('.rpc-container').length){
+        return $.Defferred().reject('DOM does not contains .rpc-container');
+    }
+
     var RPCButton = Widget.extend({
         events: {
             'click .rpc-button': 'onClick'
@@ -21,24 +25,10 @@ odoo.define('academy.demo_rpc', function(require){
                     teacher_id : this.$el.data('teacher-id')
                 }
             }).then(function(teachers_found){
-                console.log(teachers_found``)
+                console.log(teachers_found)
             });
-            // RPC.query({
-            //     model: 'academy.teacher',
-            //     method: 'search_read',
-            //     args: [[['id','=',this.$el.data('teacher-id')]], ['biography']],
-            // }).then(function(res){
-            //     if(res.length){
-            //         console.log(res);
-            //         $('.biography').html(data[0].biography);
-            //     }
-            // });
         },
-
     });
-    if(!$('.rpc-container').length){
-        return $.Defferred().reject('DOM does not contains .rpc-container');
-    }
     $('.rpc-container').each(function(index){
         var $elem = $(this);
         var button = new RPCButton(null, $elem.data());

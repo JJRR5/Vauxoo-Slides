@@ -3,7 +3,7 @@
     <template id="layout" inherit_id="website.layout" name="Custom Header">
         <xpath expr="//div[@id='wrapwrap']/header" position="attributes">
             <attrbute name="id">
-                My Header
+                custom_header
             </attrbute>
         </xpath>
         <xpath expr="//div[@id='wrapwrap']/header/div" position="after">
