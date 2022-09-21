@@ -1,0 +1,47 @@
+@brand-primary: red;
+@border-radius-base: 0;
+@border-radius-large: 0;
+@border-radius-small: 0;
+@color-wine: #6f1010;
+@padding-1: 1em;
+@margin-2: 2em; 
+@border-1: 1px solid #EAEAEA;
+@padding-20: 20px;
+@shadow: 0 2px 5px rgba(51, 51, 51, 0.4);
+
+.services {
+    background-color: @color-wine;
+    padding: @padding-1;
+    margin: @padding-1 @margin-2;
+    li {
+        display: block;
+        position: relative;
+        background-color: aliceblue;
+        color: @color-wine;
+        padding: @padding-1;
+        text-align: center;
+        margin: 1em;
+        font-size: 1.5em;
+        border-radius: 2em;
+        font-weight: bold;
+    }
+}
+.snippet_testimonial {
+    border: @border-1;
+    padding: @padding-20;
+    &.opt_shadow img {
+        box-shadow: @shadow;
+    }
+    &.opt_grey_bg {
+        border: none;
+        background-color: #eaeaea;
+    }
+    &.opt_animate_img {
+        img {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}

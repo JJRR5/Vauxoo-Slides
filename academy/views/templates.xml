@@ -5,15 +5,18 @@
             <title>Academy</title>
             <div class="oe_structure">
                 <t t-foreach="teachers" t-as="teacher">
-                    <p>
-                        <a t-attf-href="/academy/render_teacher/{{ slug(teacher) }}">
+                    <p class="rpc-container" t-att-data-teacher-id="teacher.id">
+                        <a class="rpc-container" t-attf-href="#">
                             <t t-esc="teacher.name"/>
                         </a>
                     </p>
                 </t>
+                <div class="biography">
+                </div>
             </div>
         </t>
     </template>
+    
     <template id="biography">
         <t t-call="website.layout">
         <title>Academy</title>
@@ -26,5 +29,11 @@
                 </div>
             </div>
         </t>
+    </template>
+
+    <template id="products_item" inherit_id="website_sale.products_item">
+        <xpath expr="//form/div" position="after">
+            <p t-esc="product.id" class="text-center"></p>
+        </xpath>
     </template>
 </odoo>

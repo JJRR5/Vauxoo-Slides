@@ -15,12 +15,10 @@
             </form>
         </field>
     </record>
-
     <record id="academy_teacher_action" model="ir.actions.act_window">
         <field name="name">academy_teacher_action</field>
         <field name="res_model">academy.teacher</field>
     </record>
-
     <menuitem sequence="0" id="menu_academy" name="Academy">
         <menuitem id="menu_academy_content" name="Academy Content">
             <menuitem id="menu_academy_content_teachers" action="academy_teacher_action"/>
